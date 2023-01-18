@@ -1,4 +1,4 @@
-import {Component, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -6,7 +6,7 @@ import {Component, EventEmitter} from '@angular/core';
   styleUrls: ['./game-control.component.css']
 })
 export class GameControlComponent {
-  intervalFired = new EventEmitter<number>();
+  @Output() intervalFired = new EventEmitter<number>();
   interval;
   lastNumber=0;
   onStartGame() {
